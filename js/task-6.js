@@ -29,6 +29,10 @@ function createBoxes(amount) {
   boxesContainerElem.innerHTML = boxesMarkup;
 }
 
+function destroyBoxes() {
+  boxesContainerElem.innerHTML = "";
+}
+
 btnCreateElem.addEventListener("click", () => {
   const inputValue = inputAmauntElem.value;
   const isInputValueValid = inputValue > 0 && inputValue <= 100;
@@ -40,5 +44,5 @@ btnCreateElem.addEventListener("click", () => {
 });
 
 btnDestroyElem.addEventListener("click", () => {
-  boxesContainerElem.innerHTML = "";
+  destroyBoxes();
 });
