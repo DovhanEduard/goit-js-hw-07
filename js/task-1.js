@@ -1,20 +1,14 @@
 "use strict";
 
-const liElem = document.querySelectorAll("#categories li.item");
+const liElemList = document.querySelectorAll("#categories li.item");
 
-console.log("Number of categories: ", liElem.length);
+console.log("Number of categories: ", liElemList.length);
 
-const liElem1 = liElem[0].querySelectorAll("li");
-const titleElem1 = liElem[0].querySelector("h2");
-console.log("Category: ", titleElem1.textContent);
-console.log("Elements: ", liElem1.length);
+liElemList.forEach((liElem) => {
+    const liSubElemList = liElem.querySelectorAll("li");
+    const liSubElemTitle = liElem.querySelector("h2");
 
-const liElem2 = liElem[1].querySelectorAll("li");
-const titleElem2 = liElem[1].querySelector("h2");
-console.log("Category: ", titleElem2.textContent);
-console.log("Elements: ", liElem2.length);
+    console.log("Category: ", liSubElemTitle.textContent);
+    console.log("Elements: ", liSubElemList.length);
+});
 
-const liElem3 = liElem[2].querySelectorAll("li");
-const titleElem3 = liElem[2].querySelector("h2");
-console.log("Category: ", titleElem3.textContent);
-console.log("Elements: ", liElem3.length);

@@ -5,7 +5,7 @@ const spanElem = document.querySelector("#name-output");
 
 inputElem.addEventListener("input", () => {
     const trimmedValue = inputElem.value.trim();
-    spanElem.textContent = trimmedValue === "" ? "Anonymous" : trimmedValue;
-
+    const isEmptyValue = !trimmedValue;
+    spanElem.textContent = isEmptyValue ? "Anonymous" : trimmedValue;
 });
 

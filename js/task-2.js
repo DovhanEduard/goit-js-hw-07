@@ -27,14 +27,15 @@ const images = [
   },
 ];
 
-function imageTemplate(imageObj) {
-  return `<li class = "gallery-item"><img class = "gallery-item-img" src = "${imageObj.url}" alt = "${imageObj.alt}" /></li>`;
-}
-function imagesTemplate(obj) {
-  return obj.map(imageTemplate).join("");
+function getImageLiItem(imageConfig) {
+  return `<li class = "gallery-item"><img class = "gallery-item-img" src = "${imageConfig.url}" alt = "${imageConfig.alt}" /></li>`;
 }
 
-const imagesGalleryMarkup = imagesTemplate(images);
+function getImagesMarkup(imagesConfigList) {
+  return imagesConfigList.map(getImageLiItem).join("");
+}
+
+const imagesGalleryMarkup = getImagesMarkup(images);
 const ulElem = document.querySelector(".gallery");
 
 ulElem.insertAdjacentHTML("afterbegin", imagesGalleryMarkup);
