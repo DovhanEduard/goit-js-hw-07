@@ -19,8 +19,7 @@ formElem.addEventListener("submit", (event) => {
   if (isFormFilled) {
     formValues.email = trimedEmail;
     formValues.password = trimedPassword;
-    console.log(formValues.email);
-    console.log(formValues.password);
+    console.log(formValues);
 
     formElem.reset();
   } else {
