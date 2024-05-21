@@ -16,6 +16,13 @@ body {
 img {
   display: block;
 }
+ul{
+  list-style-type: none;
+}
+/*----------- Task 1 -----------*/
+
+/*----------- Task 1. -----------*/
+
 /*----------- Task 2 -----------*/
 .gallery {
   display: flex;

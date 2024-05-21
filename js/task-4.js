@@ -10,15 +10,17 @@ const formValues = {};
 formElem.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const isEmail = Boolean(inputEmailElem.value);
-  const isPassword = Boolean(inputPasswordElem.value);
+  const trimedEmail = inputEmailElem.value.trim();
+  const trimedPassword = inputPasswordElem.value.trim();
+  const isEmail = Boolean(trimedEmail);
+  const isPassword = Boolean(trimedPassword);
   const isFormFilled = isEmail && isPassword;
 
   if (isFormFilled) {
-    formValues.email = inputEmailElem.value.trim();
-    formValues.password = inputPasswordElem.value.trim();
-
-    console.log(`Email: ${formValues.email}\nPassword: ${formValues.password}`);
+    formValues.email = trimedEmail;
+    formValues.password = trimedPassword;
+    console.log(formValues.email);
+    console.log(formValues.password);
 
     formElem.reset();
   } else {
